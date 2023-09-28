@@ -172,6 +172,9 @@ input.error {
         flex-direction: column;
         margin: 20px 0px;
     }
+    .custom-qr-btns {
+      flex-direction: column;
+    }
     .container > span {
         margin-bottom: 20px;
     }
