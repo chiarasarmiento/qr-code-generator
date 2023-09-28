@@ -15,4 +15,4 @@ To run this website locally, follow these steps:
 
 ## Acknowledgments
 
-- Quotes API (https://api-ninjas.com/api/qrcode)
+- QR Code API (https://api-ninjas.com/api/qrcode)
