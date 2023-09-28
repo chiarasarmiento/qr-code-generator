@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="custom-qr">
+                <h1>QR Code <br>Generator</h1>
+                <form action="#" method="POST" id="form">
+                    <label for="url">Enter URL</label>
+                    <input type="text" name="URL" id="url" placeholder="https://www.domain.com/" required="required"/>
+
+                    <label for="fg-color">Colors</label>
+                    <div class="custom-qr-btns">
+                        <select name="fg-color" id="fg-color">
+                            <option value="">Foreground</option>
+                            <option value="000000">Black</option>
+                            <option value="e81416">Red</option>
+                            <option value="ffa500">Orange</option>
+                            <option value="faeb36">Yellow</option>
+                            <option value="79c314">Green</option>
+                            <option value="487de7">Blue</option>
+                            <option value="4b369d">Indigo</option>
+                            <option value="70369d">Violet</option>
+                            <option value="ffffff">White</option>
+                        </select>
+                        <select name="bg-color" id="bg-color">
+                            <option value="">Background</option>
+                            <option value="e81416">Red</option>
+                            <option value="ffa500">Orange</option>
+                            <option value="faeb36">Yellow</option>
+                            <option value="79c314">Green</option>
+                            <option value="487de7">Blue</option>
+                            <option value="4b369d">Indigo</option>
+                            <option value="70369d">Violet</option>
+                            <option value="ffffff">White</option>
+                        </select>
+                    </div>
+                    <button type="button" id="generate">Generate QR</button>
+                    <span class="loader"></span>
+                </form>
+            </div>
+            <div class="generate-qr">
+                <div id="qrCode">
+                    <img src="images/default-qr.png" alt="Default QR Code">
+                </div>
+                <div class="radio-inputs">
+                    <label class="radio">
+                      <input type="radio" name="format" value="png" checked>
+                      <span class="name">png</span>
+                    </label>
+                    <label class="radio">
+                      <input type="radio" name="format" value="jpg">
+                      <span class="name">jpg</span>
+                    </label>
+                        
+                    <label class="radio">
+                      <input type="radio" name="format" value="jpeg">
+                      <span class="name">jpeg</span>
+                    </label>
+                </div>
+                <a href="" id="download" download="">Download</a>
+            </div>
+        </div>
+       <span>Created by Chiara Sarmiento</span> 
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $( "#form" ).validate({
+            rules: {
+                URL: {
+                    required: true
+                }
+            },
+            messages: {
+                URL: "",
+            }
+        });
+    </script>
+</body>
+</html>

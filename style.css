@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: #146C94;
+    font-family: 'JetBrains Mono', monospace;
+}
+h1{
+    margin-bottom: 20px;
+    color: #19a7ce;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  background-image:  url("images/bg-wave.svg");
+  background-position: center;
+  background-size: cover;
+}
+.container > div {
+  padding: 30px;
+  background-color: #fff;
+  display: flex;
+  gap: 30px;
+  border-radius: 20px;
+}
+.container > span {
+    font-size: 0.8em;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+input[type="text"] {
+  border: 0;
+  background-color: #F6F1F1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.custom-qr-btns {
+  display: flex;
+  gap: 20px;
+}
+select{
+  border: 0;
+  background-color: #F6F1F1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+button {
+  border: 2px solid #146C94;
+  padding: 20px;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  background: 0;
+}
+ 
+.generate-qr {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #AFD3E2;
+    padding: 30px;
+    border-radius: 10px;
+}
+#qrCode{
+    height: 250px;
+}
+.radio-inputs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background-color: #f6f1f1;
+  padding: 10px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: none;
+  padding: .5rem 0;
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #146C94;
+  color: #fff;
+}
+#download {
+  background-color: #146C94;
+  padding: 20px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+input.error {
+  border: 1px solid red;
+}
+.error {
+  color: red;
+}
+#url-error {
+  display: none !important;
+}
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.loader {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #afd3e2;
+    border-bottom-color: #19a7ce;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 0 auto;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 735px){
+    .container > div{
+        margin: 20px;
+    }
+}
+
+@media (max-width: 665px){
+    .container{
+        height: unset;
+    }
+    .container > div{
+        flex-direction: column;
+        margin: 20px 0px;
+    }
+    .container > span {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 400px){
+    .container > div{
+        width: 100%;
+        margin: unset;
+    }
+     
+}
